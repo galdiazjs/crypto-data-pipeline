@@ -11,26 +11,28 @@ para las 100 criptomonedas más relevantes del mercado.
 
 ## 🏗️ Arquitectura
 
+```
 CoinGecko API (REST)
-│
-▼
+        │
+        ▼
 Python ETL Pipeline
 (Extracción + Transformación + Carga)
-│
-▼
+        │
+        ▼
 AWS S3 (Data Lake)
 s3://bucket/crypto/year=YYYY/month=MM/day=DD/data.parquet
-│
-├──────────────────┐
-▼                  ▼
+        │
+        ├──────────────────┐
+        ▼                  ▼
 AWS Glue              dbt (SQL Transforms)
 Data Catalog    stg_crypto → crypto_enriquecido
-→ resumen_mercado_diario
-→ top_10_por_dia
-│
-▼
-AWS Athena
-(SQL queries sobre S3)
+                         → resumen_mercado_diario
+                         → top_10_por_dia
+                               │
+                               ▼
+                         AWS Athena
+                    (SQL queries sobre S3)
+```
 
 ## 🛠️ Stack Tecnológico
 
@@ -44,6 +46,8 @@ AWS Athena
 | Consulta | AWS Athena | SQL sobre S3 sin base de datos |
 
 ## 📁 Estructura del Proyecto
+
+```
 crypto-pipeline/
 ├── pipeline/
 │   ├── extractor.py       # CoinGeckoExtractor: extracción con retry y rate limit
@@ -58,6 +62,7 @@ crypto-pipeline/
 ├── .env.example           # Variables de entorno necesarias
 ├── requirements.txt       # Dependencias del proyecto
 └── README.md
+```
 
 ## 🚀 Cómo Ejecutar
 
