@@ -1,0 +1,28 @@
+name: 'dbt_crypto'
+version: '1.0.0'
+profile: 'dbt_crypto'
+
+model-paths: ["models"]
+seed-paths:  ["seeds"]
+test-paths:  ["tests"]
+
+models:
+  dbt_crypto:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  dbt_crypto:
+    crypto_raw:
+      +column_types:
+        ranking_market_cap:      bigint
+        precio_usd:              double
+        market_cap_usd:          double
+        volumen_24h_usd:         double
+        variacion_24h_pct:       double
+        variacion_7d_pct:        double
+        ratio_volumen_mcap:      double
+        fecha_carga:             date
+        timestamp_actualizacion: varchar

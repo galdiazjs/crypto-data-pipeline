@@ -1,0 +1,11 @@
+coin_id,simbolo,nombre,ranking_market_cap,precio_usd,market_cap_usd,volumen_24h_usd,variacion_24h_pct,variacion_7d_pct,categoria_precio,performance_24h,ratio_volumen_mcap,fecha_carga,timestamp_actualizacion
+bitcoin,BTC,Bitcoin,1,62453.0,1229847362451.0,28394817293.0,2.34,5.12,mega_cap,positivo,0.0231,2026-05-13,2026-05-13T14:00:00Z
+ethereum,ETH,Ethereum,2,3421.0,411234567890.0,15234567890.0,1.87,3.45,large_cap,positivo,0.037,2026-05-13,2026-05-13T14:00:00Z
+tether,USDT,Tether,3,1.0,98765432100.0,45678901234.0,0.02,0.01,small_cap,neutro,0.4625,2026-05-13,2026-05-13T14:00:00Z
+binancecoin,BNB,BNB,4,412.5,63456789012.0,1987654321.0,-1.23,-2.34,large_cap,neutro,0.0313,2026-05-13,2026-05-13T14:00:00Z
+solana,SOL,Solana,5,178.3,78234567890.0,4567890123.0,5.67,12.34,mid_cap,positivo,0.0584,2026-05-13,2026-05-13T14:00:00Z
+ripple,XRP,XRP,6,0.58,31234567890.0,2345678901.0,-3.45,-5.67,micro_cap,negativo,0.0751,2026-05-13,2026-05-13T14:00:00Z
+dogecoin,DOGE,Dogecoin,7,0.18,25678901234.0,3456789012.0,8.9,15.67,micro_cap,muy_positivo,0.1346,2026-05-13,2026-05-13T14:00:00Z
+cardano,ADA,Cardano,8,0.62,21987654321.0,987654321.0,-0.45,1.23,micro_cap,neutro,0.045,2026-05-13,2026-05-13T14:00:00Z
+avalanche,AVAX,Avalanche,9,38.7,15876543210.0,876543210.0,4.32,8.9,small_cap,positivo,0.0552,2026-05-13,2026-05-13T14:00:00Z
+chainlink,LINK,Chainlink,10,18.9,10987654321.0,654321098.0,-11.23,-8.45,small_cap,muy_negativo,0.0596,2026-05-13,2026-05-13T14:00:00Z

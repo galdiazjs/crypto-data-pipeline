@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    description: "Datos crudos cargados por el pipeline Python desde CoinGecko"
+    tables:
+      - name: crypto_raw
+        description: "Snapshot diario de las top 100 criptomonedas por market cap"
+        columns:
+          - name: coin_id
+            description: "Identificador unico de la moneda en CoinGecko (ej: bitcoin)"
+          - name: simbolo
+            description: "Simbolo de la moneda en mayusculas (ej: BTC)"
+          - name: precio_usd
+            description: "Precio actual en dolares al momento de la extraccion"
+          - name: market_cap_usd
+            description: "Capitalizacion de mercado en dolares"
+          - name: volumen_24h_usd
+            description: "Volumen negociado en las ultimas 24 horas en dolares"
+          - name: variacion_24h_pct
+            description: "Variacion porcentual del precio en las ultimas 24 horas"
+          - name: fecha_carga
+            description: "Fecha en que el pipeline cargo este snapshot (YYYY-MM-DD)"

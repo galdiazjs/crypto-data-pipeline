@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_crypto
+    description: "Datos crudos de CoinGecko limpios y estandarizados. Una fila por moneda por dia."
+    columns:
+      - name: coin_id
+        description: "Identificador unico de la moneda"
+        tests:
+          - not_null
+      - name: precio_usd
+        description: "Precio actual en dolares"
+        tests:
+          - not_null
+      - name: fecha_carga
+        description: "Fecha del snapshot"
+        tests:
+          - not_null
+
+  - name: crypto_enriquecido
+    description: "Datos enriquecidos con tier de mercado, banderas y metricas en escala legible."
+    columns:
+      - name: coin_id
+        tests:
+          - not_null
+      - name: tier_mercado
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['tier_1', 'tier_2', 'tier_3', 'otros']
+      - name: subio_hoy
+        tests:
+          - not_null
+
+  - name: resumen_mercado_diario
+    description: "Una fila por dia con metricas agregadas del mercado total."
+    columns:
+      - name: fecha
+        tests:
+          - unique
+          - not_null
+
+  - name: top_10_por_dia
+    description: "Top 10 ganadores y perdedores por dia segun variacion de 24 horas."
+    columns:
+      - name: coin_id
+        tests:
+          - not_null
+      - name: categoria_ranking
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['top_ganador', 'top_perdedor']

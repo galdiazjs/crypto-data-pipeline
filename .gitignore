@@ -1,0 +1,47 @@
+# Credenciales y configuración sensible
+.env
+*.env
+credentials.json
+aws_credentials
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Logs del pipeline
+*.log
+logs/
+
+# Archivos de base de datos local
+*.duckdb
+*.db
+*.sqlite
+
+# dbt
+dbt_crypto/target/
+dbt_crypto/logs/
+dbt_crypto/.user.yml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs temporales del pipeline
+/tmp/
