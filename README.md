@@ -151,5 +151,5 @@ de cada query.
 ## 👤 Autor
 
 Saul Galdamez — Data Engineer
-- LinkedIn: [linkedin.com/in/galdiazjs]
+- LinkedIn: [https://linkedin.com/in/galdiazjs]
 - GitHub: [https://github.com/galdiazjs]
